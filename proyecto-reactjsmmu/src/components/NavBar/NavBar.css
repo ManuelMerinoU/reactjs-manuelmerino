@@ -1,0 +1,46 @@
+#titulo{
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#titulo h1 a{
+    text-decoration: none;
+    color: #000;
+}
+
+.nav{
+    background-color: #efeeee;
+    width: 100%;
+}
+
+.nav ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav ul li{
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 0.75rem;
+	text-transform: uppercase;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav ul li a:hover{
+    color: #06afa7;
+    transition: all .3s;
+}
+
+.active a{
+    text-decoration: none;
+    color: #cfcfcf
+}
