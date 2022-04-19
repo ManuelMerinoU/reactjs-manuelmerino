@@ -1,8 +1,11 @@
 import React from 'react';
-import './NavBar.css'
+import CartW from '../CartWidget/cartw';
+import './NavBar.css';
 
 function NavBar(props) {
     return (
+        <>
+        {/* Un comentario JSX */}
         <div className='nav'>
             <div id='titulo'>  
                 <h1> <a href="index.html"> About Saints Studio</a> </h1>
@@ -22,7 +25,9 @@ function NavBar(props) {
 
                 <li> <a href="#footer"> Derechos de Autor </a> </li>
             </ul>
+            <CartW />
         </div>
+        </>
     );
 }
 
