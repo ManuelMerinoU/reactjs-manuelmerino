@@ -1,9 +1,13 @@
 .imgcarrito{
-    width: 40px;
-    height: 40px;
     display: inline;
     position: relative;
     bottom: 50px;
     left: 430px;
+}
+
+.imgcarrito img{
+    width: 40px;
+    height: 40px;
+    display: inline;
     cursor: pointer;
 }

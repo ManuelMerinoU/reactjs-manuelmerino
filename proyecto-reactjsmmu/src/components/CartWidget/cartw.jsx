@@ -5,8 +5,8 @@ import './cw.css';
 const CartW = () => {
   return (
     <>
-    <a href='carrito.html'>
-      <img className='imgcarrito' src={imgcw} alt="carrito"/>
+    <a className='imgcarrito' href='carrito.html'>
+      <img src={imgcw} alt="carrito"/>
     </a>
     </>
   )
