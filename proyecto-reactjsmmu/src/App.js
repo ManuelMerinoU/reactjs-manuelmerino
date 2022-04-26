@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Button from './components/Button';
 import Formulario from './components/Formulario/Formulario';
-import ItemListC from './components/ItemListContainer/itemlc';
+import ItemListC from './components/ItemListContainer/ItemListContainer';
 
 function App() {
 
