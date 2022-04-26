@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Button from './components/Button';
 import Formulario from './components/Formulario/Formulario';
-import ItemListC from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListC greeting="Catalogo de nuestros productos"/>
+      <ItemListContainer greeting="Catalogo de nuestros productos"/>
       <Button txt='Click para Saber Más!'/>
       <Button />
       <Formulario handleForm={extraerForm}/>

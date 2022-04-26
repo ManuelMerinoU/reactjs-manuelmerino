@@ -1,8 +1,8 @@
 import React from 'react';
 import imgcw from './imgcw/carrito.png';
-import './cw.css';
+import './CartWidget.css';
 
-const CartW = () => {
+const CartWidget = () => {
   return (
     <>
     <a className='imgcarrito' href='carrito.html'>
@@ -12,4 +12,4 @@ const CartW = () => {
   )
 }
 
-export default CartW
+export default CartWidget

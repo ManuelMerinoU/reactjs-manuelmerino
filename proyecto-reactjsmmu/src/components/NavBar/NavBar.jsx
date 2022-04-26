@@ -1,5 +1,5 @@
 import React from 'react';
-import CartW from '../CartWidget/cartw';
+import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
 
 function NavBar(props) {
@@ -25,7 +25,7 @@ function NavBar(props) {
 
                 <li> <a href="#footer"> Derechos de Autor </a> </li>
             </ul>
-            <CartW />
+            <CartWidget />
         </div>
         </>
     );
