@@ -1,0 +1,37 @@
+.cards-productos {
+    height: 420px;
+    width: 340px;
+    text-align: center;
+    margin: 20px;
+    border: 0px solid #d3d3d3;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+}
+
+.nombre-producto{
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+}
+
+
+.footer {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+}
+
+.box-producto {
+    height: 90%;
+    width: 100%;
+}
+
+.img-producto {
+    padding: 10px;
+}
+
+.product-img {
+    width: 300px;
+    height: 300px;
+}
