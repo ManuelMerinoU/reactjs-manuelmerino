@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 import NavBar from './components/NavBar/NavBar';
 import Button from './components/Button';
 import Formulario from './components/Formulario/Formulario';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+//import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
 
@@ -18,11 +19,12 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer greeting="Catalogo de nuestros productos"/>
+      {/*<ItemListContainer greeting="Catalogo de nuestros productos"/>*/}
+      <ItemDetailContainer greeting="Producto Seleccionado"/>
       <Button txt='Click para Saber Más!'/>
       <Button />
       <Formulario handleForm={extraerForm}/>
-      <header className="App-header">
+      {/*<header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -35,7 +37,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header>*/}
     </div>
   );
 }
