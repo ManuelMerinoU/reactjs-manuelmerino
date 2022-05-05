@@ -44,3 +44,58 @@
     text-decoration: none;
     color: #cfcfcf
 }
+
+                                    /* MENU Y SUBMENU CATEGORIAS*/
+
+
+.menu{
+    position: relative;
+	display: inline-block;
+}
+
+.menu:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+    
+.menu a{
+    display: block;
+    padding: 10px;
+    color: #353535;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color: #06afa7;
+    transition: all .3s;
+}
+
+
+.submenu{
+
+	display: inline-flex;
+    position: absolute;
+    width: 1%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+    -moz-transition: opacity 1.5s;
+    -ms-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.submenu li a{
+    display: inline-block;
+    padding: 1px;
+    color: #fff;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+}
+

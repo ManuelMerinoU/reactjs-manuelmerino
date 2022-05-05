@@ -4,7 +4,7 @@ import './DetailItemList.css';
 
 function DetailProduct({ item }) {
   return (
-    <div className='cards-productos'>
+    <div className='cards-producto'>
         <div className='box-producto'>
             <div className='img-producto'>
                 <img className='product-img' src={ item?.img } alt="Imagen del producto" />
