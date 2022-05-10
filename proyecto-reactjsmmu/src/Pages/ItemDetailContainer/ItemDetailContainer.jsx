@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import DetailProduct from '../../components/DetailItemList/DetailItemList';
-import GetItemDetail from '../../components/GetItemDetail/GetItemDetail';
+import GetItemDetail from '../../Utils/GetItemDetail/GetItemDetail';
 import Loading from '../../components/Loading/Loading';
 
 import './ItemDetailContainer.css';

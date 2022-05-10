@@ -1,5 +1,5 @@
 import React from 'react';
-import Product from '../Items/Items';
+import Product from '../Product/Product';
 import './ItemsList.css';
 
 function ItemsList({ items }) {
