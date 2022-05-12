@@ -1,15 +1,31 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import Swal from 'sweetalert2'
+
 
 import { Link } from 'react-router-dom';
 
 import ItemCount from '../ItemCount/ItemCount';
+import CartContext from '../../Utils/cardContext/cardContext';
 
 import './DetailItemList.css';
 
-function DetailProduct({ item }) {
-  const [cantidadDeProductos, setCantidadDeProductos] = useState(null);
+/* TOASTIFY */
+import { notifyBorrarProducto } from '../../Utils/Toastify/Toastify';
+import { notifyBorrasTodo } from '../../Utils/Toastify/Toastify';
+
+
+
+function DetailItemList({ item }) {
+ 
+
+  const cartContx = useContext(CartContext) ;
+  
   function añadirCarrito(cantidadAgregada) {
-    setCantidadDeProductos(cantidadAgregada);
+    cartContx.addProduct({quantity: cantidadAgregada, ...item });
   }
 
   return (
@@ -22,17 +38,40 @@ function DetailProduct({ item }) {
 
         <div className='info-producto'>
             <div className='nombre-producto'>{ item?.title }</div>
-            <p className='futura'>FUTURA TABLA DE TALLES ACÁ</p>
+             <button className='futura' >FUTURA TABLA DE TALLES ACÁ</button>
             <div className='footer'>{ item?.price }</div>
             <div>
-              { cantidadDeProductos ?
-                <button className='terminar-compra'><Link to='/cart'> Terminar compra ({ cantidadDeProductos } items)</Link></button> :
-                <ItemCount initial={1} stock={10} onAdd={añadirCarrito} />
+              <ItemCount initial={1} stock={10} onAdd={añadirCarrito} />
+
+              <button onClick={() => notifyBorrasTodo(cartContx.clear())}>Borrar Carrito</button>
+
+              <button onClick={() => console.log(cartContx.products)} >Mostrar carrito</button>
+
+              <button onClick={() => notifyBorrarProducto(cartContx.removeProduct(item.id))} >Borrar Producto</button>
+
+              {/*<button onClick={() => cartContx.clear()} >Clear</button>*/}
+
+              <button onClick={() => alert(cartContx.isInCart(item.id))} >Is in cart</button>
+
+              <button onClick={() => toast(cartContx.getCartQuantity())} >Cantidad de Productos</button>
+
+              {cartContx.products.length &&
+                  <button onClick={() => console.log(cartContx)}>
+                      <Link to='/cart'>
+                        Terminar compra ({ cartContx.getCartQuantity() } items)
+                      </Link>
+                  </button>
               }
+              <ToastContainer/>
             </div>
         </div>
     </div>
   )
 }
+export default DetailItemList
 
-export default DetailProduct
+/*Toastify({
+  text: `Agregaste este Producto al Carrito`,
+  duration: 2000,
+  className:"toastitext"
+}).showToast();*/

@@ -10,26 +10,30 @@ function GetItemDetail(id) {
     const productsList = [
       {
         id: 1,
-        title: 'Calcos',
+        title: 'Calcos1',
         price: '$250',
+        category: "calcos",
         img:    calco1
       },
       {
         id: 2,
-        title: 'Remera Estampada',
+        title: 'Remera Estampada cantantes3',
         price: '$950',
+        category: "remeras",
         img:    cantante3
       },
       {
         id: 3,
-        title: 'Calcos',
+        title: 'Calcos2',
         price: '$250',
+        category: "calcos",
         img:    calco2
       },
       {
         id: 4,
-        title: 'Remera Estampada',
+        title: 'Remera Estampada animales1',
         price: '$950',
+        category: "remeras",
         img:    animales1
       }
     ];

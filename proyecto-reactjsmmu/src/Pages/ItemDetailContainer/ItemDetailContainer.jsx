@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { useParams } from 'react-router-dom';
 
-import DetailProduct from '../../components/DetailItemList/DetailItemList';
+import DetailItemList from '../../components/DetailItemList/DetailItemList';
 import GetItemDetail from '../../Utils/GetItemDetail/GetItemDetail';
 import Loading from '../../components/Loading/Loading';
 
@@ -29,7 +29,7 @@ function ItemDetailContainer () {
     <div className='greeting'>
       <p>Producto Seleccionado</p>
       {loading && <Loading/>}
-      <DetailProduct item={item}/>
+      <DetailItemList item={item}/>
     </div>
   )
 }
