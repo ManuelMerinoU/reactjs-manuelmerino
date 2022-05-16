@@ -1,14 +1,23 @@
-import React, {useState} from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import ItemCount from '../ItemCount/ItemCount';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import CartContext from '../../Utils/cardContext/cardContext';
+//import ItemCount from '../ItemCount/ItemCount';
+
+import Botonglobito from "../Botonglobito/Botonglobito";
+
+/* TOASTIFY */
+import { notifyAgregar } from '../../Utils/Toastify/Toastify';
+import { notifyBorrarProducto } from '../../Utils/Toastify/Toastify';
+
 import './Product.css';
 
 function Product({ item }) {
 
-  const [cantidadDeProductos, setCantidadDeProductos] = useState(null);
-  function añadirCarrito(cantidadAgregada) {
-    setCantidadDeProductos(cantidadAgregada);
-  }
+  const cartContx = useContext (CartContext)
 
   return (
     <div className='cards-productos-catalogo'>
@@ -17,19 +26,21 @@ function Product({ item }) {
           <img className='productos-catalogo-img' src={ item?.img } alt="Imagen del producto" />
         </div>
         <div className='nombre-productos-catalogo'>{ item?.title }</div>
-        <div className='footer-catalogo'>{ item?.price }</div>
+        <div className='footer-catalogo'>${ item?.price }</div>
         <div className='btn-categoria-item'>
           <Link to={"/item/" + item?.id}>Saber Más!</Link>
         </div >
+
+        <button className='btn-menos-globito'>
+          <Botonglobito isButton onBotonglobito={() => notifyBorrarProducto(cartContx.removeProduct(item.id))}>-1</Botonglobito>
+        </button>
         
-        <div>
-          { cantidadDeProductos ?
-            <button><Link to='/cart'>Terminar compra ({ cantidadDeProductos } items)</Link></button> :
-            <ItemCount initial={1} stock={10} onAdd={añadirCarrito} />
-          }
-        </div>
-        
+        <button className='btn-mas-globito'>
+          <Botonglobito  isButton onBotonglobito={() => notifyAgregar(cartContx.addProduct({quantity: 1, ...item}))} >+</Botonglobito>
+        </button>
+
       </div>
+      <ToastContainer/>
     </div>
   )
 }

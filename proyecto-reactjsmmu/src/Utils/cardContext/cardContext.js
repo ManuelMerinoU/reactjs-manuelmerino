@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const CartContext = createContext({
@@ -40,6 +39,12 @@ export const CartContextProvider = ({ children }) => {
         return productList.map(p => p.id).indexOf(id) !== -1;
     }
 
+    const getTotalPrice = () => {
+        return productList.reduce((total, value) => {
+            return total + value.price*value.quantity
+        }, 0)
+    }
+
     const getCartQuantity = () => {
 
     
@@ -55,6 +60,7 @@ export const CartContextProvider = ({ children }) => {
             removeProduct,
             clear,
             isInCart,
+            getTotalPrice,
             getCartQuantity
         }}>
             {children}

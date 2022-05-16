@@ -1,4 +1,11 @@
 import React, { useState } from 'react'
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+/* TOASTIFY */
+import { notifyAgregar } from '../../Utils/Toastify/Toastify';
+
 import './ItemCount.css';
 
 function ItemCount ({stock, initial, onAdd}) {
@@ -19,12 +26,15 @@ function ItemCount ({stock, initial, onAdd}) {
   
   return(
     <div className="itemcount">
-        <div>
-            <button className='btnmym' onClick={() => agregarBtn ()}>-</button>
-            <input readOnly value={count} />
-            <button className='btnmym' onClick={() => botonMenos()}>+</button>
-        </div>
-        <button onClick={() => (count <= stock) && onAdd(count)}>Agregar al carrito</button>
+      <div>
+        <button className='btnmym' onClick={() => agregarBtn ()}>-</button>
+        <input readOnly value={count} />
+        <button className='btnmym' onClick={() => botonMenos()}>+</button>
+      </div>
+
+      <button onClick={() => notifyAgregar((count <= stock) && onAdd(count))}>Agregar al carrito</button>
+      
+      <ToastContainer/>
     </div>
   )
 }

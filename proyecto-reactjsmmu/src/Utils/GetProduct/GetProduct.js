@@ -1,4 +1,3 @@
-//import React from 'react'
 import animales1 from '../../components/Media/animales/animales1.jpg'
 import calco1 from '../../components/Media/calcos/calco1.jpg'
 import calco2 from '../../components/Media/calcos/calco2.jpg'
@@ -10,28 +9,28 @@ function GetProducts(category) {
       {
         id: 1,
         title: 'Calcos',
-        price: '$250',
+        price: 250,
         category: "calcos",
         img:    calco1
       },
       {
         id: 2,
         title: 'Remera Estampada',
-        price: '$950',
+        price: 950,
         category: "remeras",
         img:    cantante3
       },
       {
         id: 3,
         title: 'Calcos',
-        price: '$250',
+        price: 250,
         category: "calcos",
         img:    calco2
       },
       {
         id: 4,
         title: 'Remera Estampada',
-        price: '$950',
+        price: 950,
         category: "remeras",
         img:    animales1
       }

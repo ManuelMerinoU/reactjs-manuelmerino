@@ -38,9 +38,9 @@ export function notifyCompra(){
     });
 }
 
-export function notifyHayoNo(){
+export function notifyAgregar(){
 
-    toast.success('Este producto se encuentra en su carrito!', {
+    toast.success('💪Producto Agregado al Carrito!', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -49,17 +49,4 @@ export function notifyHayoNo(){
         draggable: true,
         progress: undefined,
     });
-}
-
-export function notifyQuantity(){
-
-    toast.success('La cantidad de este producto es de', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-    });
-}
+} 

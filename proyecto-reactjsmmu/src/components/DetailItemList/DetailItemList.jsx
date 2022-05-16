@@ -1,10 +1,7 @@
 import React, { useContext } from 'react';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-import Swal from 'sweetalert2'
-
+//import { ToastContainer, toast } from 'react-toastify';
+//import 'react-toastify/dist/ReactToastify.css';
 
 import { Link } from 'react-router-dom';
 
@@ -14,8 +11,8 @@ import CartContext from '../../Utils/cardContext/cardContext';
 import './DetailItemList.css';
 
 /* TOASTIFY */
-import { notifyBorrarProducto } from '../../Utils/Toastify/Toastify';
-import { notifyBorrasTodo } from '../../Utils/Toastify/Toastify';
+//import { notifyBorrarProducto } from '../../Utils/Toastify/Toastify';
+//import { notifyBorrasTodo } from '../../Utils/Toastify/Toastify';
 
 
 
@@ -39,39 +36,21 @@ function DetailItemList({ item }) {
         <div className='info-producto'>
             <div className='nombre-producto'>{ item?.title }</div>
              <button className='futura' >FUTURA TABLA DE TALLES ACÁ</button>
-            <div className='footer'>{ item?.price }</div>
+            <div className='footer'>${ item?.price }</div>
             <div>
               <ItemCount initial={1} stock={10} onAdd={añadirCarrito} />
 
-              <button onClick={() => notifyBorrasTodo(cartContx.clear())}>Borrar Carrito</button>
-
-              <button onClick={() => console.log(cartContx.products)} >Mostrar carrito</button>
-
-              <button onClick={() => notifyBorrarProducto(cartContx.removeProduct(item.id))} >Borrar Producto</button>
-
-              {/*<button onClick={() => cartContx.clear()} >Clear</button>*/}
-
-              <button onClick={() => alert(cartContx.isInCart(item.id))} >Is in cart</button>
-
-              <button onClick={() => toast(cartContx.getCartQuantity())} >Cantidad de Productos</button>
-
-              {cartContx.products.length &&
-                  <button onClick={() => console.log(cartContx)}>
+              {cartContx.isInCart(item.id) &&
+                  <button>
                       <Link to='/cart'>
                         Terminar compra ({ cartContx.getCartQuantity() } items)
                       </Link>
                   </button>
               }
-              <ToastContainer/>
+              {/*<ToastContainer/>*/}
             </div>
         </div>
     </div>
   )
 }
 export default DetailItemList
-
-/*Toastify({
-  text: `Agregaste este Producto al Carrito`,
-  duration: 2000,
-  className:"toastitext"
-}).showToast();*/

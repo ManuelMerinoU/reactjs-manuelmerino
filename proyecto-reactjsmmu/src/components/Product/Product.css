@@ -62,3 +62,48 @@
     color: #fff;
     background-color: rgb(0, 0, 0);
 }
+
+.btn-mas-globito{
+    color: #000000cc;
+    display: block;
+    font-size: 20px;
+    margin-left: 140px;
+    background-color: #cfcfcf;
+    border-style: none;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    cursor: pointer;
+
+    position: relative;
+    bottom: 25px;
+
+}
+
+.btn-mas-globito:hover{
+    color: #fff;
+    background-color: #1f9b72c7;
+}
+
+.btn-menos-globito{
+    color: #000000cc;
+    display: block;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 175px;
+    background-color: #cfcfcf;
+    border-style: none;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-menos-globito:hover{
+    color: #fff;
+    background-color: #1f9b72c7;
+}
