@@ -36,7 +36,7 @@ function Product({ item }) {
         </button>
         
         <button className='btn-mas-globito'>
-          <Botonglobito  isButton onBotonglobito={() => notifyAgregar(cartContx.addProduct({quantity: 1, ...item}))} >+</Botonglobito>
+          <Botonglobito  isButton onBotonglobito={() => notifyAgregar(cartContx.addProduct({...item, quantity: 1}))} >+</Botonglobito>
         </button>
 
       </div>

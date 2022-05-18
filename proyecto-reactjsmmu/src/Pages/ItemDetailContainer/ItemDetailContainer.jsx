@@ -17,8 +17,8 @@ function ItemDetailContainer () {
   useEffect(() => {
     setLoading(true)
     GetItemDetail(id)
-      .then(res => {
-        setItem(res);
+      .then(snapshot => {
+        setItem( {...snapshot.data(), id: snapshot.id});
       })
       .finally(()=>{
         setLoading(false)

@@ -4,7 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import { CartContextProvider } from "./Utils/cardContext/cardContext"
+import { CartContextProvider } from "./Utils/cardContext/cardContext";
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB4q37vKFeRrX7yBrEsFJ72adgGNIljL4E",
+  authDomain: "ventaderemeras-9f8e4.firebaseapp.com",
+  projectId: "ventaderemeras-9f8e4",
+  storageBucket: "ventaderemeras-9f8e4.appspot.com",
+  messagingSenderId: "824094292024",
+  appId: "1:824094292024:web:310ad5dd682a145c120ecd"
+};
+
+initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>

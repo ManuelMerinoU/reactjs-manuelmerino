@@ -13,9 +13,17 @@ function ItemListContainer () {
   const { categoryId } = useParams ();
 
   useEffect(() => {
+
+    /*getDocs(q, itemCollection)
+      .then(snapshot =>{
+        console.log(snapshot.docs.map( doc => { return{ ...doc.data(), id: doc.id }}));
+    })*/
+
     GetProducts(categoryId)
-      .then(res => {
-        setProducts(res);
+      .then(snapshot => {
+        setProducts(snapshot.docs.map( doc => { 
+          return{ ...doc.data(), id: doc.id }
+        }));;
       })
   },[categoryId]);
 

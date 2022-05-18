@@ -27,7 +27,7 @@ function CartItems({item}) {
         <p>${ item?.price }</p>
 
         <button className='btn-mas-carrito'>
-          <Botonglobito  isButton onBotonglobito={() => notifyAgregar(cartContx.addProduct({quantity: 1, ...item}))} >+</Botonglobito>
+          <Botonglobito  isButton onBotonglobito={() => notifyAgregar(cartContx.addProduct({...item, quantity: 1}))} >+</Botonglobito>
         </button>
 
         <div className='btnca-quantity'>
