@@ -8,7 +8,7 @@ import CartContext from '../../Utils/cardContext/cardContext'
 import CartItems from '../../components/CartItems/CartItems';
 
 /* TOASTIFY */
-import { notifyCompra } from '../../Utils/Toastify/Toastify';
+//import { notifyCompra } from '../../Utils/Toastify/Toastify';
 import { notifyBorrasTodo } from '../../Utils/Toastify/Toastify';
 
 function Cart() {
@@ -20,7 +20,9 @@ function Cart() {
       {cartCtxt.products.length !== 0 ?
         <div className='total-container'>
           <p>Precio total: ${cartCtxt.getTotalPrice()}</p>
-          <button onClick={() => notifyCompra(cartCtxt.clear())}>Terminar compra</button>
+          <Link to="/terminarcompra">
+            <button>Terminar compra</button>
+          </Link>
           <button onClick={() => notifyBorrasTodo(cartCtxt.clear())}>Borrar Carrito</button>
         </div> :
         <>

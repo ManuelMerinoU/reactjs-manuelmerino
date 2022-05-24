@@ -7,6 +7,7 @@ const CartContext = createContext({
     removeProduct: () => {},
     clear: () => {},
     isInCart: () => {},
+    getTotalPrice: () =>{},
     getCartQuantity: () => {}
 });
 

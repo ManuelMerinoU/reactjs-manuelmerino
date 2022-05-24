@@ -10,6 +10,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './Pages/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Pages/ItemDetailContainer/ItemDetailContainer';
 import Cart from './Pages/Cart/Cart';
+import TerminarCompra from './Pages/TerminarCompra/TerminarCompra';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/cart' element={<Cart/>} />
         <Route path='/category/:categoryId' element={<ItemListContainer />} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
+        <Route path='/TerminarCompra' element={<TerminarCompra/>} />
       </Routes>
     </div>
   );
