@@ -8,6 +8,10 @@ import Loading from '../../components/Loading/Loading';
 
 import './ItemDetailContainer.css';
 
+import Footer from '../../components/Footer/Footer';
+
+
+
 function ItemDetailContainer () {
 
   const [item, setItem] = useState({});
@@ -26,11 +30,15 @@ function ItemDetailContainer () {
   },[id]);
 
   return(
-    <div className='greeting'>
-      <p>Producto Seleccionado</p>
-      {loading && <Loading/>}
-      <DetailItemList item={item}/>
-    </div>
+    <>
+      <div className='greeting'>
+        <p>Producto Seleccionado</p>
+        {loading && <Loading/>}
+        <DetailItemList item={item}/>
+      </div>
+
+      <Footer/>
+    </>
   )
 }
 

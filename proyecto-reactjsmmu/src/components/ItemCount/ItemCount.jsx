@@ -12,11 +12,11 @@ function ItemCount ({stock, initial, onAdd}) {
 
   const [count, setCount] = useState(initial);
 
-    function botonMenos() {
-      if (count < stock) {
-        setCount(count + 1);
-      }
+  function botonMenos() {
+    if (count < stock) {
+      setCount(count + 1);
     }
+  }
   
   function agregarBtn() {
     if (count > 1) {

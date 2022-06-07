@@ -4,10 +4,10 @@
 
 3. Utilizaré para este proyecto CSS puro, ya que no me gusta Bootstrap, lo veo como una ayuda que capaz en algun momento ya no se recomiende,  ademas de entrenar bien la utilización del css puro.  
 
-4. Estoy siguiendo cada recomendación que me hace mi tutor ya que siempre son para mejora y me ayudan a organizar bien mi codigo, tanto en lo visual como en la buena practica de codear. 
+4. Por el momento no decidí utilizar el archivo .env, ya que no  lo veo conveniente para un trabajo libre.
 
-5. Separe cada componente y lo fui importando en donde era necesario implementarlo.
+5. Cada componente esta en su carpeta propia con su css y jsx, y lo fui importando en donde era necesario implementarlo.
 
-6. En un futuro voy a implementar librerias como toastify-js y sweetalert, para darle vida a cada evento independiente.
+6. Implemente librerias como toastify-js y sweetalert, para darle vida a cada evento independiente.
 
-7. Estoy siguiendo cada recomendación que escucho en las clases tanto de mi tutor, como de los demas tutores, alumnos o profesor, asi puedo el día de mañana tener varias opciones y elegir la mas optima para mi proyecto. 
+7. Usando el " npm i " se podran bajar todas las dependencias utilizadas en este proyecto inspirado en un E-Commerce.

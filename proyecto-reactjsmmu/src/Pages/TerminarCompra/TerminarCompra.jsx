@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 import Loading from "../../components/Loading/Loading"
 
+import Footer from '../../components/Footer/Footer';
+
 /* TOASTIFY */
 //import { notifyCompra } from '../../Utils/Toastify/Toastify';
 
@@ -87,6 +89,7 @@ const TerminarCompra = () => {
                 </div>
             )
         }
+        
         <div>
             {
                 orderID &&(
@@ -99,6 +102,7 @@ const TerminarCompra = () => {
             }
         </div>
 
+        <Footer/>
     </>
   )
 }

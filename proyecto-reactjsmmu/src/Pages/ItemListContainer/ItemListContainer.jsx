@@ -6,6 +6,8 @@ import GetProducts from '../../Utils/GetProduct/GetProduct';
 
 import '../ItemListContainer/ItemListContainer.css';
 
+import Footer from '../../components/Footer/Footer';
+
 
 function ItemListContainer () {
 
@@ -28,10 +30,14 @@ function ItemListContainer () {
   },[categoryId]);
 
   return(
-    <div className='greeting'>
-      <p>Catalogo de nuestros productos</p>
-      <ItemsList items={products}/>
-    </div>
+    <>
+      <div className='greeting'>
+        <p>Catalogo de nuestros productos</p>
+        <ItemsList items={products}/>
+      </div>
+
+      <Footer/>
+    </>
   )
 }
 
